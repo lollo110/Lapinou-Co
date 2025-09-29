@@ -1,6 +1,5 @@
 <?php
-require_once './init.inc.php';
-
+require_once './inc/init.inc.php';
 ?>
 
 
@@ -14,13 +13,14 @@ require_once './init.inc.php';
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
+<header>
 
 <body>
 
 
   <nav class="top-nav">
     <div class="brand">
-      <img src="../img/logo-final.gif" alt="Logo Lapinou & Co" class="logo">
+      <img src="../assets/img/logo-final.gif" alt="Logo Lapinou & Co" class="logo">
       <img src="../img/TITRELAPINOUUU.png" alt="Lapinou & Co" class="titre">
     </div>
   </nav>
@@ -183,3 +183,4 @@ require_once './init.inc.php';
   </style>
 
   </section>
+</header>
