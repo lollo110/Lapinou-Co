@@ -21,7 +21,7 @@ require_once __DIR__ . '/init.inc.php';
 
   <nav class="top-nav">
     <div class="brand">
-      <img src="<?= BASE_URL ?>/assets/img/logo-final.gif" alt="Logo Lapinou & Co" class="logo">
+      <a href="<?=BASE_URL?>index.php"><img src="<?= BASE_URL ?>/assets/img/logo-final.gif" alt="Logo Lapinou & Co" class="logo"></a>
       <img src="<?= BASE_URL ?>/assets/img/TITRELAPINOUUU.png" alt="Lapinou & Co" class="titre">
     </div>
   </nav>
