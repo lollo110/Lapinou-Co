@@ -11,6 +11,7 @@ require_once __DIR__ . '/init.inc.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/88c7dae6e1.js" crossorigin="anonymous"></script>
 </head>
 
 <header>
@@ -29,11 +30,11 @@ require_once __DIR__ . '/init.inc.php';
   <nav class="menu-nav">
     <div class="menu-toggle" id="menu-toggle">☰</div>
     <div class="menu-links" id="menu-links">
-      <a href="#">Jouets</a>
-      <a href="#">Accessoires</a>
-      <a href="#">Nourriture</a>
-      <a href="#">Contact</a>
-      <a href="#">Qui sommes-nous ?</a>
+      <a href="<?= BASE_URL ?>vue/produit.php?produit=jouets">Jouets</a>
+      <a href="<?= BASE_URL ?>vue/produit.php?produit=accessoires">Accessoires</a>
+      <a href="<?= BASE_URL ?>vue/produit.php?produit=nourritures">Nourritures</a>
+      <a href="<?= BASE_URL ?>vue/contact.php">Contact</a>
+      <a href="<?= BASE_URL ?>vue/qui_sommes_nous.php">Qui sommes-nous ?</a>
     </div>
   </nav>
 
