@@ -13,19 +13,11 @@ require_once './init.inc.php';
   <title>Bootstrap demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lapinou & Co</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 
 <body>
 
-  <!-- Première nav -->
+
   <nav class="top-nav">
     <div class="brand">
       <img src="../img/logo-final.gif" alt="Logo Lapinou & Co" class="logo">
@@ -33,7 +25,7 @@ require_once './init.inc.php';
     </div>
   </nav>
 
-  <!-- Deuxième nav -->
+  
   <nav class="menu-nav">
     <div class="menu-toggle" id="menu-toggle">☰</div>
     <div class="menu-links" id="menu-links">
@@ -49,13 +41,12 @@ require_once './init.inc.php';
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family:  "Sriracha", cursive;
       background-image: url(../img/bglapinou&co.png);
-      background-size: cover;
-      background-attachment: fixed;
+      
     }
 
-    /* Première nav */
+  
     .top-nav {
       display: flex;
       justify-content: center;
@@ -63,26 +54,28 @@ require_once './init.inc.php';
       background: #FDFCFD;
       padding: 15px 20px;
       border-radius: 12px;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 0px 30px rgba(2, 2, 2, 1);
       margin: 10px auto;
       max-width: 1700px;
+       background-image: url(../img/pattes.gif); background-size: contain;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 15px;
+     
+    
     }
 
     .brand .logo {
-      height: 120px;
+      height: 130px;
     }
 
     .brand .titre {
-      height: 60px;
+      height: 68px;
     }
 
-    /* Deuxième nav */
+  
     .menu-nav {
       display: flex;
       justify-content: center;
@@ -129,7 +122,7 @@ require_once './init.inc.php';
       width: 100%;
     }
 
-    /* --- Menu burger --- */
+    
     .menu-toggle {
       display: none;
       font-size: 28px;
@@ -188,7 +181,5 @@ require_once './init.inc.php';
       }
     }
   </style>
-
-
 
   </section>
