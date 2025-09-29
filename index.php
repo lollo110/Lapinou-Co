@@ -2,8 +2,6 @@
 require_once './inc/haut.inc.php';
 ?>
 
-<body style="background-image: url(./assets/img/background.png);">
-
     <div class="container my-4">
 
         <!-- Carrousel -->
@@ -73,7 +71,6 @@ require_once './inc/haut.inc.php';
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+<?php
+require_once './inc/bas.inc.php';
+?>

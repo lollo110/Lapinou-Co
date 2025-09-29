@@ -15,13 +15,13 @@ require_once './inc/init.inc.php';
 
 <header>
 
-<body>
+<body style="background-image: url(./assets/img/background.png);">
 
 
   <nav class="top-nav">
     <div class="brand">
-      <img src="../assets/img/logo-final.gif" alt="Logo Lapinou & Co" class="logo">
-      <img src="../img/TITRELAPINOUUU.png" alt="Lapinou & Co" class="titre">
+      <img src="./assets/img/logo-final.gif" alt="Logo Lapinou & Co" class="logo">
+      <img src="./assets/img/TITRELAPINOUUU.png" alt="Lapinou & Co" class="titre">
     </div>
   </nav>
 
@@ -39,6 +39,9 @@ require_once './inc/init.inc.php';
 
 
   <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
     body {
       margin: 0;
       font-family:  "Sriracha", cursive;
