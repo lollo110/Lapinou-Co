@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 25 sep. 2025 à 14:21
+-- Généré le : lun. 29 sep. 2025 à 13:07
 -- Version du serveur : 8.4.3
 -- Version de PHP : 8.3.16
 
@@ -69,6 +69,28 @@ CREATE TABLE `nourriture` (
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `question`
+--
+
+CREATE TABLE `question` (
+  `id` int NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `objet` enum('accessoire','jouet','nourriture','serviceClient') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `question`
+--
+
+INSERT INTO `question` (`id`, `nom`, `prenom`, `email`, `objet`, `description`) VALUES
+(1, 'lorenzo', 'Cilurzo', 'lorenzo.c@gmail.com', 'accessoire', 'J\'ai un probleme');
+
 --
 -- Index pour les tables déchargées
 --
@@ -98,6 +120,13 @@ ALTER TABLE `nourriture`
   ADD UNIQUE KEY `image` (`image`);
 
 --
+-- Index pour la table `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -118,6 +147,12 @@ ALTER TABLE `jouet`
 --
 ALTER TABLE `nourriture`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `question`
+--
+ALTER TABLE `question`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
