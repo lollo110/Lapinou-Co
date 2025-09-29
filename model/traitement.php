@@ -34,4 +34,17 @@ if (!empty($_POST) && isset($_POST['form_submit'])) {
     }
 }
 
+if(isset($_GET)){
+    $produit = $_GET['produit'];
+    if($produit === 'jouets'){
+        header('Location: ../vue/produit.php?produit=jouets');
+        exit;
+    } elseif($produit === 'accessoires'){
+        header('Location: ../vue/produit.php?produit=accessoires');
+        exit;
+    } elseif($produit === 'nourritures'){
+        header('Location: ../vue/produit.php?produit=nourritures');
+        exit;
+    }
+}
 ?>

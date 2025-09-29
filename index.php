@@ -47,7 +47,7 @@ require_once 'inc/haut.inc.php';
             </div>
 
             <div class="col-md-4 mb-4">
-                <a class="text-decoration-none" href="<?= BASE_URL ?>model/traitement.php?produit=accesoires">
+                <a class="text-decoration-none" href="<?= BASE_URL ?>model/traitement.php?produit=accessoires">
                     <div class="card h-100">
                         <img src="<?= BASE_URL ?>assets/img/category_accessoires.png" class="card-img-top" alt="Card 2">
                         <div class="card-body">

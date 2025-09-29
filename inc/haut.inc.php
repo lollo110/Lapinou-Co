@@ -30,9 +30,9 @@ require_once __DIR__ . '/init.inc.php';
   <nav class="menu-nav">
     <div class="menu-toggle" id="menu-toggle">☰</div>
     <div class="menu-links" id="menu-links">
-      <a href="<?= BASE_URL ?>model/traitement.php.php?produit=jouets">Jouets</a>
+      <a href="<?= BASE_URL ?>model/traitement.php?produit=jouets">Jouets</a>
       <a href="<?= BASE_URL ?>model/traitement.php?produit=accessoires">Accessoires</a>
-      <a href="<?= BASE_URL ?>model/traitement.php.php?produit=nourritures">Nourritures</a>
+      <a href="<?= BASE_URL ?>model/traitement.php?produit=nourritures">Nourritures</a>
       <a href="<?= BASE_URL ?>vue/contact.php">Contact</a>
       <a href="<?= BASE_URL ?>vue/qui_sommes_nous.php">Qui sommes-nous ?</a>
     </div>

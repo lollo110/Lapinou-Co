@@ -1,4 +1,35 @@
-<?php require_once __DIR__ . "/../inc/haut.inc.php" ?>
+<?php require_once __DIR__ . "/../inc/haut.inc.php"; 
+
+if (isset($_GET['produit']) && $_GET['produit'] == 'jouets') {
+  $resultat = executeRequete("SELECT * FROM jouet WHERE id = :id",[
+    ':id' => $_GET['id']
+  ]);
+  $produit = $resultat->fetch();
+  $img = 'jouets';
+}
+if ($_GET['produit'] == 'accessoires') {
+  $resultat = executeRequete("SELECT * FROM accessoire WHERE id = :id",[
+    ':id' => $_GET['id']
+  ]);
+  $produit = $resultat->fetch();
+  $img = 'accessoires';
+}
+if ($_GET['produit'] == 'nourritures') {
+   $resultat = executeRequete("SELECT * FROM nourriture WHERE id = :id",[
+    ':id' => $_GET['id']
+  ]);
+  $produit = $resultat->fetch();
+  $img = 'nourritures';
+}
+
+
+foreach($produit as $key => $value){
+    $produit[$key] = htmlspecialchars($value);
+}
+
+
+
+?>
 
   <style>
     body {
@@ -69,21 +100,20 @@
   <div class="container mt-5 py-5 mb-5">
     <div class="product-card row g-4 align-items-center">
 
+
       <!-- Image produit -->
       <div class="col-md-6 text-center m-auto">
-        <img src="../assets/img/VIV9343-2-removebg-preview.png" class="product-img img-fluid shadow" alt="Tunnel en osier">
+        <img src="../assets/img/<?= $img; ?>/<?= $produit['image']; ?>" class="product-img img-fluid shadow" alt="<?= $produit['nom']; ?>">
       </div>
 
       <!-- Infos produit -->
       <div class="col-md-6">
-        <h2 class="product-title">Tunnel en osier</h2>
+        <h2 class="product-title"><?= $produit['nom']; ?></h2>
         <p class="product-rating">⭐⭐⭐⭐⭐ (25 avis)</p>
-        <p class="product-price">21,00 €</p>
+        <p class="product-price"><?= $produit['prix']; ?></p>
 
         <p class="product-description">
-          Ce tunnel en osier est parfait pour vos animaux de compagnie.  
-          Fabriqué en matériaux naturels, il offre un espace de jeu et de repos agréable.  
-          Durable, esthétique et respectueux de l’environnement, c’est un choix idéal pour le confort de vos animaux.
+         <?= $produit['description']; ?>
         </p>
 
         <div class="d-flex gap-3 mt-4">
@@ -91,6 +121,7 @@
           <a href="./produit.php" class="btn btn-outline-secondary btn-custom">⬅ Retour</a>
         </div>
       </div>
+
 
     </div>
   </div>
