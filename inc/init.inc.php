@@ -14,7 +14,7 @@ $pdo = new PDO(
 session_start();
 
 // Je crée la constante pour les inclusion
-define('BASE_URL','/lapinou&co/');
+define('BASE_URL','/lapinou-co/');
 
 
 require_once __DIR__ . '/fonction.inc.php';
