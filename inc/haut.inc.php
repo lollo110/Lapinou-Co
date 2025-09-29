@@ -1,5 +1,5 @@
 <?php
-require_once './inc/init.inc.php';
+require_once __DIR__ . '/init.inc.php';
 ?>
 
 
@@ -15,13 +15,13 @@ require_once './inc/init.inc.php';
 
 <header>
 
-<body style="background-image: url(./assets/img/background.png);">
+<body style="background-image: url(<?= BASE_URL ?>assets/img/background.png);">
 
 
   <nav class="top-nav">
     <div class="brand">
-      <img src="./assets/img/logo-final.gif" alt="Logo Lapinou & Co" class="logo">
-      <img src="./assets/img/TITRELAPINOUUU.png" alt="Lapinou & Co" class="titre">
+      <img src="<?= BASE_URL ?>/assets/img/logo-final.gif" alt="Logo Lapinou & Co" class="logo">
+      <img src="<?= BASE_URL ?>/assets/img/TITRELAPINOUUU.png" alt="Lapinou & Co" class="titre">
     </div>
   </nav>
 
@@ -45,7 +45,6 @@ require_once './inc/init.inc.php';
     body {
       margin: 0;
       font-family:  "Sriracha", cursive;
-      background-image: url(../img/bglapinou&co.png);
       
     }
 
@@ -60,7 +59,7 @@ require_once './inc/init.inc.php';
       box-shadow: 0px 0px 30px rgba(2, 2, 2, 1);
       margin: 10px auto;
       max-width: 1700px;
-       background-image: url(../img/pattes.gif); background-size: contain;
+       background-image: url(<?= BASE_URL ?>assets/img/pattes.gif); background-size: contain;
     }
 
     .brand {
@@ -95,7 +94,9 @@ require_once './inc/init.inc.php';
     .menu-links {
       display: flex;
       gap: 40px;
-    }
+      position: relative;
+      z-index: 200000;
+        }
 
     .menu-nav a {
       text-decoration: none;
