@@ -36,7 +36,7 @@ require_once 'inc/haut.inc.php';
         <!-- Cards -->
         <div class="row text-center">
             <div class="col-md-4 mb-4">
-                <a class="text-decoration-none" href="<?= BASE_URL ?>vue/produit.php?produit=jouets">
+                <a class="text-decoration-none" href="<?= BASE_URL ?>model/traitement.php?produit=jouets">
                     <div class="card h-100">
                         <img src="<?= BASE_URL ?>assets/img/category_jouets.png" class="card-img-top" alt="Card 1">
                         <div class="card-body">
@@ -47,7 +47,7 @@ require_once 'inc/haut.inc.php';
             </div>
 
             <div class="col-md-4 mb-4">
-                <a class="text-decoration-none" href="<?= BASE_URL ?>vue/produit.php?produit=accesoires">
+                <a class="text-decoration-none" href="<?= BASE_URL ?>model/traitement.php?produit=accesoires">
                     <div class="card h-100">
                         <img src="<?= BASE_URL ?>assets/img/category_accessoires.png" class="card-img-top" alt="Card 2">
                         <div class="card-body">
@@ -58,7 +58,7 @@ require_once 'inc/haut.inc.php';
             </div>
 
             <div class="col-md-4 mb-4">
-                <a class="text-decoration-none" href="<?= BASE_URL ?>vue/produit.php?produit=nourritures">
+                <a class="text-decoration-none" href="<?= BASE_URL ?>model/traitement.php?produit=nourritures">
                     <div class="card h-100">
                         <img src="<?= BASE_URL ?>assets/img/category_nourriture.png" class="card-img-top" alt="Card 3">
                         <div class="card-body">
