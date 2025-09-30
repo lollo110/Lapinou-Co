@@ -1,4 +1,12 @@
-<?php require_once __DIR__ . "/../inc/haut.inc.php"; 
+<?php 
+
+if (!isset($_GET['produit']) ||!isset($_GET['id'])) {
+    header('Location: ../index.php');
+    exit;
+}
+
+require_once __DIR__ . "/../inc/haut.inc.php";
+
 
 if (isset($_GET['produit']) && $_GET['produit'] == 'jouets') {
   $resultat = executeRequete("SELECT * FROM jouet WHERE id = :id",[
@@ -110,7 +118,7 @@ foreach($produit as $key => $value){
       <div class="col-md-6">
         <h2 class="product-title"><?= $produit['nom']; ?></h2>
         <p class="product-rating">⭐⭐⭐⭐⭐ (25 avis)</p>
-        <p class="product-price"><?= $produit['prix']; ?></p>
+        <p class="product-price"><?= number_format($produit['prix'], 2)?> €</p>
 
         <p class="product-description">
          <?= $produit['description']; ?>
@@ -118,7 +126,7 @@ foreach($produit as $key => $value){
 
         <div class="d-flex gap-3 mt-4">
           <button class="btn btn-success btn-custom">🛒 Ajouter au Panier</button>
-          <a href="./produit.php" class="btn btn-outline-secondary btn-custom">⬅ Retour</a>
+          <a href="<?= BASE_URL ?>vue/produit.php?produit=<?= $_GET['produit']; ?>" class="btn btn-outline-secondary btn-custom">⬅ Retour</a>
         </div>
       </div>
 

@@ -1,4 +1,11 @@
-<?php require_once __DIR__ . "/../inc/haut.inc.php"; ?>
+<?php
+
+if (!isset($_GET['produit'])) {
+    header('Location: ../index.php');
+    exit;
+}
+
+require_once __DIR__ . "/../inc/haut.inc.php"; ?>
 
 
 <?php
@@ -109,7 +116,7 @@ foreach ($produits as $value) {
           <div class="card-body">
             <h5 class="card-title"><?= $p['nom']?></h5>
             <p class="product-rating">⭐⭐⭐⭐⭐</p>
-            <p class="product-price"><?= $p['prix']?> €</p>
+            <p class="product-price"><?= number_format($p['prix'], 2)?> €</p>
             <a href="./details.php?produit=<?= $_GET['produit']; ?>&id=<?= $p['id']; ?>" class="btn btn-primary btn-custom">Détails du Produit</a>
           </div>
         </div>

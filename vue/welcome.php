@@ -18,7 +18,7 @@
     }
 
     .ecran {
-        background-image: url(../assets/img/Gemini_Generated_Image_sxfcutsxfcutsxfc.png);
+        background-image: url(../assets/img/background.png);
         background-size: contain;
         height: 100vh;
         width: 100%;
