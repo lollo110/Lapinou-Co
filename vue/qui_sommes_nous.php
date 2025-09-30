@@ -1,4 +1,14 @@
 <?php require_once __DIR__ . "/../inc/haut.inc.php"; ?>
+
+<style>
+    h2{
+    font-family: "Bangers", system-ui;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+    font-size: 4em;
+  }
+</style>
 <div class="container my-5">
   <h2 class="text-center pb-5">Notre Équipe</h2>
   <div class="col-12 col-md-6 d-flex justify-content-center mx-auto
