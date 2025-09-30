@@ -2,7 +2,7 @@ let logo = document.querySelector(".logo");
 
 function createCarrot(){
     let carrot = document.createElement("img");
-    carrot.src = "../assets/img/carrot_pointer.png";
+    carrot.src = "./assets/img/carrot_pointer.png";
     carrot.classList.add("carrot");
 
     carrot.style.left = Math.random() * window.innerWidth + "px";
@@ -27,6 +27,6 @@ document.body.addEventListener('click', function(){
 
     setTimeout(function(){
         clearInterval(rain);
-        window.location.href = "../index.php";
+        window.location.href = "./vue/page_accueil.php";
     }, 4000)
 })

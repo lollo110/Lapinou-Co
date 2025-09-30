@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($_GET['produit'])) {
-    header('Location: ../index.php');
+    header('Location: ../vue/page');
     exit;
 }
 

@@ -1,76 +1,99 @@
-<?php
-require_once 'inc/haut.inc.php';
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="container my-4">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <title>Welcome</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
-        <!-- Carrousel -->
-        <div id="carouselExampleIndicators" class="carousel slide mb-5">
-            <!-- Boutons indicateurs -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-            </div>
+    body {
+        overflow: hidden;
+    }
 
+    .ecran {
+        background-color: white height: 100vh;
+        width: 100%;
+    }
+
+    .logo {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        transition: transform 4s ease;
+    }
+
+    .zoom {
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    .carrot {
+        position: absolute;
+        top: -60px;
+        width: 50px;
+        animation: fall linear forwards;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    @keyframes fall {
+        from {
+            transform: translateY(-60px) rotate(0deg);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateY(102vh) rotate(360deg);
+            opacity: 0.8;
+        }
+    }
+
+    h1 {
+        padding-top: 2%;
+        font-size: 3em;
+
+    }
+
+    @media (max-width: 1024px){
+
+        h1 img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .logo {
+            width: 60%;
+        }
+
+        h1 img {
+            width: 100%;
+        }
+    }
     
-<!-- Images -->
-<div class="carousel-inner rounded">
-  <div class="carousel-item active">
-    <img src="<?= BASE_URL ?>assets/img/carrousel_2.png" class="d-block w-100 img-fluid" alt="image1" style="height: 70vh; object-fit: cover;">
-  </div>
-  <div class="carousel-item">
-    <img src="<?= BASE_URL ?>assets/img/carrousel_1.png" class="d-block w-100 img-fluid" alt="image2" style="height: 70vh; object-fit: cover;">
-  </div>
-</div>
+    @media (max-width: 425px){
+        .logo {
+            width: 90%;
+        }
+    }
+    </style>
 
+<body>
 
-            <!-- Flèches -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-
-        <!-- Cards -->
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <a class="text-decoration-none" href="<?= BASE_URL ?>model/traitement.php?produit=jouets">
-                    <div class="card h-100">
-                        <img src="<?= BASE_URL ?>assets/img/category_jouets.png" class="card-img-top" alt="Card 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Jouets</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <a class="text-decoration-none" href="<?= BASE_URL ?>model/traitement.php?produit=accessoires">
-                    <div class="card h-100">
-                        <img src="<?= BASE_URL ?>assets/img/category_accessoires.png" class="card-img-top" alt="Card 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Accessoires</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <a class="text-decoration-none" href="<?= BASE_URL ?>model/traitement.php?produit=nourritures">
-                    <div class="card h-100">
-                        <img src="<?= BASE_URL ?>assets/img/category_nourriture.png" class="card-img-top" alt="Card 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Nourriture</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
+    <div class="ecran">
+        <img src="./assets/img/logo-final-nobackground.gif" alt="logo" class="logo">
+        <h1 class="text-center"><img src="./assets/img/welcome.png" alt=""></h1>
     </div>
 
-<?php
-require_once 'inc/bas.inc.php';
-?>
+    <script src="./assets/js/structure.js"></script>
+</body>
+
+</html>
