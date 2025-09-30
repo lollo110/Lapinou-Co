@@ -41,6 +41,7 @@ require_once __DIR__ . '/init.inc.php';
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
       body {
         margin: 0;

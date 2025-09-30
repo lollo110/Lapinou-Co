@@ -6,6 +6,21 @@
         <p style="color: green;" class="text-center">Votre demande a bien été ajouté à la base de données</p>
     <?php } ?>
 
+    <style>
+        .hover{
+            background-color: #e3b981;
+        }
+        .hover:hover {
+            background-color: #6d584f;
+        }
+    </style>
+
+    <h1 style="font-family: Bangers, system-ui;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+    font-size: 4em;" class="text-center mt-5">Formulaire de contact</h1>
+
     <form action="../model/traitement.php" method="POST" class="w-50 m-auto mt-5 py-5">
         <div class="input-group">
             <span class="input-group-text">Nom et Prénom</span>
@@ -30,7 +45,7 @@
             <textarea class="form-control" name="question" id="question" rows="3"
                 style="resize: none; height:25vh;"></textarea>
         </div>
-        <input type="submit" value="Envoyer" name="form_submit" class="form-control bg-primary text-white w-50 m-auto">
+        <input type="submit" value="Envoyer" name="form_submit" class="hover form-control text-white w-50 m-auto">
     </form>
 
 <?php require_once __DIR__ . "/../inc/bas.inc.php" ?>

@@ -35,9 +35,19 @@ foreach ($produits as $value) {
 
 ?>
 <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
   body {
     background-color: #f8f9fa;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  h1{
+    font-family: "Bangers", system-ui;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+    font-size: 4em;
   }
 
   h1 img{
@@ -103,7 +113,7 @@ foreach ($produits as $value) {
 
 <body>
   <div class="container py-5">
-    <h1 class="text-center mb-5"><img src="" alt=""></h1>
+    <h1 class="text-center mb-5">NOS <?= strtoupper($_GET['produit']); ?></h1>
 
     <div class="row g-4">
       <!-- Produit 1 -->
