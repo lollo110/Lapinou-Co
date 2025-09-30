@@ -9,9 +9,18 @@
     <style>
         .hover{
             background-color: #e3b981;
+            cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
         }
         .hover:hover {
             background-color: #6d584f;
+             cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
+        }
+
+        select{
+             cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
+        }
+        select:active{
+             cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
         }
     </style>
 

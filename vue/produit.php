@@ -102,12 +102,19 @@ foreach ($produits as $value) {
     color: #ffffffff;
     background-color: #e2b881 ;
     border: none;
+     cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
   }
 
   .btn-custom:hover {
     transform: scale(1.05);
     background-color:#6d584f;
+     cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
   }
+
+      .btn-custom:active{
+        cursor: url("<?= BASE_URL ?>assets/img/carrot_cursor_mange_noback.jpeg"), auto;
+        
+      }
 </style>
 </head>
 

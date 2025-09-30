@@ -46,7 +46,22 @@ require_once __DIR__ . '/init.inc.php';
       body {
         margin: 0;
         font-family: "Sriracha", cursive;
-
+        cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
+        
+      }
+      
+      body:active{
+        cursor: url("<?= BASE_URL ?>assets/img/carrot_cursor_mange_noback.jpeg"), auto;
+        
+      }
+      
+      a {
+        cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
+      }
+      
+      , a:active{
+        cursor: url("<?= BASE_URL ?>assets/img/carrot_cursor_mange_noback.jpeg"), auto;
+        
       }
 
 
@@ -104,7 +119,6 @@ require_once __DIR__ . '/init.inc.php';
         text-decoration: none;
         color: #fff;
         font-weight: 500;
-        cursor: pointer;
         position: relative;
         transition: color 0.3s ease;
       }

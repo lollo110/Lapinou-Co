@@ -96,10 +96,12 @@ foreach($produit as $key => $value){
       padding: 10px 20px;
       font-size: 1rem;
       transition: all 0.3s ease;
+       cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
     }
 
     .btn-custom:hover {
       transform: scale(1.05);
+      cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
     }
   </style>
 </head>
