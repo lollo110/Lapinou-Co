@@ -18,17 +18,16 @@
     }
 
     .ecran {
-        background-color: white
-        height: 100vh;
+        background-color: white height: 100vh;
         width: 100%;
     }
 
     .logo {
         position: absolute;
-        top: 50%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 30%;
+        width: 40%;
         transition: transform 4s ease;
     }
 
@@ -42,7 +41,7 @@
         width: 50px;
         animation: fall linear forwards;
         pointer-events: none;
-        z-index: 9999git 
+        z-index: 9999;
     }
 
     @keyframes fall {
@@ -58,17 +57,40 @@
     }
 
     h1 {
-        /* text-align: center; */
         padding-top: 2%;
         font-size: 3em;
+
     }
-</style>
+
+    @media (max-width: 1024px){
+
+        h1 img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .logo {
+            width: 60%;
+        }
+
+        h1 img {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 425px){
+        .logo {
+            width: 90%;
+        }
+    }
+    </style>
 
 <body>
 
     <div class="ecran">
-        <h1 class="text-center"><img src="../assets/img/welcome.png" alt=""></h1>
         <img src="../assets/img/logo-final-nobackground.gif" alt="logo" class="logo">
+        <h1 class="text-center"><img src="../assets/img/welcome.png" alt=""></h1>
     </div>
 
     <script src="../assets/js/structure.js"></script>
