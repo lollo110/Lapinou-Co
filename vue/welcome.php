@@ -18,8 +18,7 @@
     }
 
     .ecran {
-        background-image: url(../assets/img/background.png);
-        background-size: contain;
+        background-color: white
         height: 100vh;
         width: 100%;
     }
@@ -69,7 +68,7 @@
 
     <div class="ecran">
         <h1 class="text-center"><img src="../assets/img/welcome.png" alt=""></h1>
-        <img src="../assets/img/logo-final.gif" alt="logo" class="logo">
+        <img src="../assets/img/logo-final-nobackground.gif" alt="logo" class="logo">
     </div>
 
     <script src="../assets/js/structure.js"></script>
