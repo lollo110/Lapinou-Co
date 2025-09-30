@@ -33,9 +33,8 @@ foreach ($produits as $value) {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  h1 {
-    font-weight: bold;
-    color: #333;
+  h1 img{
+    width: 50%;
   }
 
   .product-card {
@@ -55,7 +54,7 @@ foreach ($produits as $value) {
   .product-img {
     max-height: 180px;
     object-fit: contain;
-    background: #ebebd8ff;
+    background: #ffffffff;
     padding: 10px;
   }
 
@@ -84,20 +83,20 @@ foreach ($produits as $value) {
     font-size: 0.9rem;
     transition: all 0.3s ease;
     color: #ffffffff;
-    background-color: #6d584f;
+    background-color: #e2b881 ;
     border: none;
   }
 
   .btn-custom:hover {
     transform: scale(1.05);
-    background-color: #e2b881;
+    background-color:#6d584f;
   }
 </style>
 </head>
 
 <body>
   <div class="container py-5">
-    <h1 class="text-center mb-5">✨ Nos Produits ✨</h1>
+    <h1 class="text-center mb-5"><img src="" alt=""></h1>
 
     <div class="row g-4">
       <!-- Produit 1 -->

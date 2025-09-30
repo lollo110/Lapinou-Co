@@ -43,7 +43,7 @@
         width: 50px;
         animation: fall linear forwards;
         pointer-events: none;
-        z-index: 9999;
+        z-index: 9999git 
     }
 
     @keyframes fall {
@@ -68,7 +68,7 @@
 <body>
 
     <div class="ecran">
-        <h1 class="text-center">WELCOME</h1>
+        <h1 class="text-center"><img src="../assets/img/welcome.png" alt=""></h1>
         <img src="../assets/img/logo-final.gif" alt="logo" class="logo">
     </div>
 
