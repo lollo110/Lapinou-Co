@@ -1,19 +1,19 @@
 <?php require_once __DIR__ . "/../inc/haut.inc.php"; ?>
 <div class="container my-5">
-    <h2 class="text-center pb-5">Notre Équipe</h2>
-    <div class="col-12 col-md-6 d-flex justify-content-center mx-auto
+  <h2 class="text-center pb-5">Notre Équipe</h2>
+  <div class="col-12 col-md-6 d-flex justify-content-center mx-auto
     pb-5">
-      <div class="card p-2" style="width:18rem;">
-        <img src="<?= BASE_URL ?>assets/img/Lorenzo.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title text-center">Lorenzo Paolo Cilurzo</h4>
-          <h5 class="card-title text-center">👨‍🍳 Chef de Projet</h5>
-          <p class="card-text text-justify">
-            Responsable de la coordination générale, il organise les tâches et veille au bon déroulement du projet.
-          </p>
-        </div>
+    <div class="card p-2" style="width:18rem;">
+      <img src="<?= BASE_URL ?>assets/img/Lorenzo.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title text-center">Lorenzo Paolo Cilurzo</h4>
+        <h5 class="card-title text-center">👨‍🍳 Chef de Projet</h5>
+        <p class="card-text text-justify">
+          Responsable de la coordination générale, il organise les tâches et veille au bon déroulement du projet.
+        </p>
       </div>
     </div>
+  </div>
   <div class="row g-4 justify-content-center">
     <!-- Card 1 -->
 

@@ -144,10 +144,10 @@
        
         <div class="col">
           <h5 class="pb-3">Lapinou & Co</h5>
-          <p class="ms-5 ps-5">Boutique exclusivement en ligne</p>
-          <p class="ms-5 ps-5">89 Rue de l’abbé pierre - 75011 Paris, France</p>
-          <p class="ms-5 ps-5">+33 6 82 41 94 18</p>
-          <p class="ms-5 ps-5">contact@lapinouco.fr</p>
+          <p>Boutique exclusivement en ligne</p>
+          <p>89 Rue de l’abbé pierre - 75011 Paris, France</p>
+          <p>+33 6 82 41 94 18</p>
+          <p>contact@lapinouco.fr</p>
         </div>
 
        
@@ -162,7 +162,7 @@
 
         <div class="col">
           <h6 class="pb-3">Liens utiles</h6>
-          <ul class="list-unstyled ms-5 ps-5">
+          <ul>
             <li><a href="#">Infos pratiques</a></li>
             <li><a href="#">Conditions générales de vente</a></li>
             <li><a href="#">Politique de confidentialité</a></li>
