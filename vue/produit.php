@@ -1,10 +1,9 @@
 <?php
 
 if (!isset($_GET['produit'])) {
-    header('Location: ../vue/page');
+    header('Location: ../vue/page_accueil.php');
     exit;
 }
-
 require_once __DIR__ . "/../inc/haut.inc.php"; ?>
 
 
