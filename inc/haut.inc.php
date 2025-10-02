@@ -35,8 +35,15 @@ require_once __DIR__ . '/init.inc.php';
         <a href="<?= BASE_URL ?>model/traitement.php?produit=nourritures">Nourritures</a>
         <a href="<?= BASE_URL ?>vue/contact.php">Contact</a>
         <a href="<?= BASE_URL ?>vue/qui_sommes_nous.php">Qui sommes-nous ?</a>
+        <?php if(!isset($_SESSION["membres"])){
+          ?>
         <a href="<?= BASE_URL ?>vue/connexion.php">Connexion</a>
-        <a href="<?= BASE_URL ?>vue/inscription.php">Inscription</a>
+        <a href="<?= BASE_URL ?>vue/inscription.php">Inscription</a>  
+
+        <?php   }else{ ?>
+          <a href="<?= BASE_URL ?>vue/panier.php">Panier</a>
+        <a href="<?= BASE_URL ?>vue/traitement.php?logout=true">Déconnexion</a>  
+        <?php } ?>
       </div>
     </nav>
 
