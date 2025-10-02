@@ -54,7 +54,7 @@
             <textarea class="form-control" name="question" id="question" rows="3"
                 style="resize: none; height:25vh;"></textarea>
         </div>
-        <input type="submit" value="Envoyer" name="form_submit" class="hover form-control text-white w-50 m-auto">
+        <input type="submit" value="Envoyer" name="form_contact" class="hover form-control text-white w-50 m-auto">
     </form>
 
 <?php require_once __DIR__ . "/../inc/bas.inc.php" ?>

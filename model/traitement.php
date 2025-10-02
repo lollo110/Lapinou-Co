@@ -3,7 +3,7 @@
 require_once "../inc/init.inc.php";
 
 
-if (!empty($_POST) && isset($_POST['form_submit'])) {
+if (!empty($_POST) && isset($_POST['form_contact'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
@@ -47,4 +47,16 @@ if(isset($_GET)){
         exit;
     }
 }
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["form_inscription"])){
+
+    $nom = $_POST["nom"];
+    $prenom  = $_POST["prenom"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+}  
+
+header("location: ../vue/inscription.php");
+
 ?>

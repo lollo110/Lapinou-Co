@@ -35,6 +35,8 @@ require_once __DIR__ . '/init.inc.php';
         <a href="<?= BASE_URL ?>model/traitement.php?produit=nourritures">Nourritures</a>
         <a href="<?= BASE_URL ?>vue/contact.php">Contact</a>
         <a href="<?= BASE_URL ?>vue/qui_sommes_nous.php">Qui sommes-nous ?</a>
+        <a href="">Connexion</a>
+        <a href="<?= BASE_URL ?>vue/inscription.php">Inscription</a>
       </div>
     </nav>
 

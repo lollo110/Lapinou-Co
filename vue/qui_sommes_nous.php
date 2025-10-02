@@ -9,6 +9,11 @@
     font-size: 4em;
   }
 </style>
+
+<body>
+  
+
+
 <div class="container my-5">
   <h2 class="text-center pb-5">Notre Équipe</h2>
   <div class="col-12 col-md-6 d-flex justify-content-center mx-auto
@@ -70,4 +75,6 @@
     </div>
   </div>
 </div>
+
+
 <?php require_once __DIR__ . "/../inc/bas.inc.php" ?>
