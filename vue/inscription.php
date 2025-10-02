@@ -23,10 +23,15 @@ require_once '../inc/haut.inc.php';
  <input class=" btn btn-success" type="submit" name="form_inscription" value="S'inscrire">
 </form>
 
-<?php
 
-var_dump($_POST["nom"])
- ?>
+<?php if (isset($_GET['error'])) { ?>
+        <p style="color: red;" class="text-center">Merci de remplir tous les champs !</p>
+    <?php }
+    if (isset($_GET['success'])) { ?>
+        <p style="color: green;" class="text-center">Votre compte à été créeer</p>
+    <?php } ?>
+
+
 
 
 <?php

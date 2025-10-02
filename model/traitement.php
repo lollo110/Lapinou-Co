@@ -28,35 +28,68 @@ if (!empty($_POST) && isset($_POST['form_contact'])) {
 
         header('Location: ../vue/contact.php?success=true');
         exit;
-
     } catch (PDOException $error) {
         echo $error->getMessage();
     }
 }
 
-if(isset($_GET)){
+if (!empty($_GET)) {
     $produit = $_GET['produit'];
-    if($produit === 'jouets'){
+    if ($produit === 'jouets') {
         header('Location: ../vue/produit.php?produit=jouets');
         exit;
-    } elseif($produit === 'accessoires'){
+    } elseif ($produit === 'accessoires') {
         header('Location: ../vue/produit.php?produit=accessoires');
         exit;
-    } elseif($produit === 'nourritures'){
+    } elseif ($produit === 'nourritures') {
         header('Location: ../vue/produit.php?produit=nourritures');
         exit;
     }
 }
 
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["form_inscription"])){
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["form_inscription"])) {
 
     $nom = $_POST["nom"];
     $prenom  = $_POST["prenom"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-}  
 
-header("location: ../vue/inscription.php");
 
-?>
+    if (!$nom || !$prenom || !$email || !$password) {
+        header("location: ../vue/inscription.php?error=true");
+        exit;
+    }
+
+    $pwd_hash = password_hash($password, PASSWORD_DEFAULT);
+
+    try {
+        executeRequete("INSERT INTO client (nom,prenom,email,password) VALUES (:nom,:prenom,:email,:password)", [
+            ":nom" => $nom,
+            ":prenom" => $prenom,
+            ":email" => $email,
+            ":password" => $pwd_hash
+        ]);
+        header("location: ../vue/inscription.php?success=true");
+        exit;
+    } catch (PDOException $erreur) {
+        echo $erreur->getMessage();
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["form_connexion"])) {
+
+    $identifiant = $_POST["email"];
+    $password = $_POST["password"];
+
+    $resultat = executeRequete("SELECT * FROM client WHERE email = :email", [":email" => $identifiant]);
+    $user = $resultat->fetch();
+
+    if($user){
+        if(password_verify($password, $user["password"])){
+            $_SESSION["membres"] = $user;
+            header("location: ../vue/page_accueil.php?connexion=true");
+            exit;
+        }
+    }
+    header("location: ../vue/connexion.php?connexion=false");
+}

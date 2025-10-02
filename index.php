@@ -18,7 +18,7 @@
     }
 
     .ecran {
-        background-color: white height: 100vh;
+        background-color: white; height: 100vh;
         width: 100%;
     }
 
@@ -62,7 +62,7 @@
 
     }
 
-    @media (max-width: 1024px){
+    @media (max-width: 1024px) {
 
         h1 img {
             width: 100%;
@@ -78,13 +78,13 @@
             width: 100%;
         }
     }
-    
-    @media (max-width: 425px){
+
+    @media (max-width: 425px) {
         .logo {
             width: 90%;
         }
     }
-    </style>
+</style>
 
 <body>
 

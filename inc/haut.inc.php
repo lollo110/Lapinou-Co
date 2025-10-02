@@ -35,7 +35,7 @@ require_once __DIR__ . '/init.inc.php';
         <a href="<?= BASE_URL ?>model/traitement.php?produit=nourritures">Nourritures</a>
         <a href="<?= BASE_URL ?>vue/contact.php">Contact</a>
         <a href="<?= BASE_URL ?>vue/qui_sommes_nous.php">Qui sommes-nous ?</a>
-        <a href="">Connexion</a>
+        <a href="<?= BASE_URL ?>vue/connexion.php">Connexion</a>
         <a href="<?= BASE_URL ?>vue/inscription.php">Inscription</a>
       </div>
     </nav>
@@ -43,27 +43,28 @@ require_once __DIR__ . '/init.inc.php';
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
       body {
         margin: 0;
         font-family: "Sriracha", cursive;
         cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
-        
+
       }
-      
-      body:active{
+
+      body:active {
         cursor: url("<?= BASE_URL ?>assets/img/carrot_cursor_mange_noback.jpeg"), auto;
-        
+
       }
-      
+
       a {
         cursor: url("<?= BASE_URL ?>assets/img/carrot_pointer.png"), auto;
       }
-      
-      , a:active{
+
+    
+      a:active {
         cursor: url("<?= BASE_URL ?>assets/img/carrot_cursor_mange_noback.jpeg"), auto;
-        
+
       }
 
 
