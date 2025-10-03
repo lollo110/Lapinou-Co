@@ -33,7 +33,7 @@ if (!empty($_POST) && isset($_POST['form_contact'])) {
     }
 }
 
-if (!empty($_GET)) {
+if (!empty($_GET) && $_GET['produit']) {
     $produit = $_GET['produit'];
     if ($produit === 'jouets') {
         header('Location: ../vue/produit.php?produit=jouets');
@@ -46,6 +46,20 @@ if (!empty($_GET)) {
         exit;
     }
 }
+
+
+if(!empty($_GET)&& $_GET['logout']){
+
+    session_destroy();
+    header('location: ../vue/deconnexion.php');
+    exit; 
+}
+
+
+
+
+
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["form_inscription"])) {
 

@@ -164,7 +164,8 @@
         <div class="col">
           <h6 class="pb-3">Liens utiles</h6>
           <ul>
-            <li><a href="#">Infos pratiques</a></li>
+            <li><a href="<?= BASE_URL ?>vue/contact.php">Contact</a></li>
+            <li><a href="<?= BASE_URL ?>vue/qui_sommes_nous.php">Qui Sommes nous</a></li>
             <li><a href="#">Conditions générales de vente</a></li>
             <li><a href="#">Politique de confidentialité</a></li>
             <li><a href="#">Mentions légales</a></li>

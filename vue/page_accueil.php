@@ -2,6 +2,17 @@
 require_once '../inc/haut.inc.php';
 ?>
 
+<?php
+
+if (!empty($_GET) && $_GET['connexion'] == "true"){
+?>
+
+<div class=" container py-5 rounded-5 bg-success">
+ <h3 class="text-center text-white"> Bonjour <?= $_SESSION['membres']['prenom'] ?>, vous êtes connecté.</h3>
+</div>
+
+<?php } ?>
+
     <div class="container my-4">
 
         <!-- Carrousel -->
